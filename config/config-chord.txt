@@ -6,7 +6,7 @@ simulation.logtime 10^6
 
 simulation.experiments 1
 
-network.size 5000
+network.size 15
 
 protocol.tr UniformRandomTransport
 {
@@ -35,16 +35,16 @@ init.create CreateNw
 control.observer MessageCounterObserver
 {
 	protocol my
-	step 90000
+	step 90
 }
 
 control.dnet DynamicNetwork
 {
-	add 20
-	add -25
-	minsize 3000
-	maxsize 7000
-	step 100000
+	add 2
+	add -2
+	minsize 5
+	maxsize 7
+	step 100
 	init.0 ChordInitializer
 	{      
 		protocol my
